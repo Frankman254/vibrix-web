@@ -1,36 +1,74 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# vibrix-web
 
-## Getting Started
+Web de la suite Vibrix + Lyrixa y presentación del futuro Transcriptor.
+Next.js 16 (App Router), Tailwind CSS v4, Motion y next-intl. Usar Node 22.18+
+y pnpm; el contenido se mantiene en `messages/es.json` y `messages/en.json`.
 
-First, run the development server:
+## Desarrollo
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
+```sh
+pnpm install
+cp .env.example .env.local
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+La raíz detecta `Accept-Language`; las páginas viven en `/es` y `/en`.
+`NEXT_PUBLIC_APP_URL` apunta a la app publicada. Sin esa variable, el CTA
+invita a explorar la suite y `/app` regresa a una sección existente.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Lista de espera (Resend)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Crear un segmento dedicado a la lista de espera de esta suite.
+2. Crear tres propiedades de contacto de tipo texto en Resend: `song_language`,
+   `signup_locale` y `waitlist_interest`.
+3. Configurar **solo en el servidor** `RESEND_API_KEY` (con acceso a contactos)
+   y `RESEND_WAITLIST_SEGMENT_ID`. No usar el prefijo `NEXT_PUBLIC_`.
+4. Reconstruir y desplegar: el estado disponible del formulario se determina
+   al generar las páginas. Comprobar con un correo propio que el contacto,
+   las propiedades y el segmento quedan guardados.
 
-## Learn More
+Se usa la API actual de [Contacts y Segments](https://resend.com/docs/api-reference/contacts/create-contact);
+Audiences está obsoleto. El formulario guarda email, idioma e interés mediante
+Server Action con validación Zod, consentimiento explícito y honeypot. Una
+petición no revoca bajas anteriores. No se envían correos desde esta web.
+Los futuros avisos deben incluir el enlace de baja que indica el formulario.
 
-To learn more about Next.js, take a look at the following resources:
+Sin configuración, la página indica que la lista aún no está abierta y no
+acepta registros. Los fallos del proveedor nunca se presentan como éxito ni
+se registran correos o credenciales en logs. Antes de abrir la lista pública,
+completar el aviso legal de privacidad de W4 y verificar el alta real; las
+pruebas locales usan un proveedor simulado y no contactan a Resend.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Metadatos y favicon
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `/sitemap.xml`: únicamente las páginas existentes en los dos idiomas, con
+  sus alternativas. Añadir rutas cuando realmente existan.
+- `/es/opengraph-image` y `/en/opengraph-image`: tarjetas PNG de 1200 × 630,
+  generadas con `next/og` y el logo local, sin descargas externas.
+- JSON-LD `SoftwareApplication`: sin precios, reseñas o estadísticas inventados.
+- `/favicon.ico`: tamaños 16/32/48 derivados del logo oficial; `/icon.svg`
+  conserva la variante adaptable. Apple usa el PNG existente de 192 px.
 
-## Deploy on Vercel
+Configurar `NEXT_PUBLIC_SITE_URL` con el dominio público. Las previews de
+Vercel usan `VERCEL_URL` y permanecen `noindex`. Solo una build de producción
+con dominio configurado permite indexación. No usar localhost en un deploy
+ajeno a Vercel: establecer siempre `NEXT_PUBLIC_SITE_URL` en ese caso.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Comprobaciones
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```sh
+pnpm format
+pnpm lint
+pnpm test
+pnpm build
+```
+
+`pnpm test` comprueba la validación y persistencia de la lista, altas repetidas,
+bajas, errores parciales y límites del proveedor, sin enviar información real.
+Con `pnpm start --port 3000`, ejecutar `pnpm test:smoke` para verificar el HTML
+visible del hero, sitemap, JSON-LD, tarjetas OG y favicon contra la build.
+`SMOKE_BASE_URL` permite apuntar a otra URL local.
+
+El export MP4/WebM figura en `Unreleased` del producto (alpha de desarrollo).
+Cambiar su disponibilidad pública solo cuando se publique la versión y se
+comprueben sus limitaciones. Estado de fases: `.agents/TAREAS.md`.

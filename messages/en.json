@@ -4,7 +4,8 @@
     "home": "Vibrix — Home",
     "openApp": "Open Vibrix",
     "explore": "Explore the suite",
-    "skip": "Skip to content"
+    "skip": "Skip to content",
+    "joinWaitlist": "Notify me at launch"
   },
   "Metadata": {
     "title": "Vibrix — Your music, made visual",
@@ -38,7 +39,8 @@
     "visualLabel": "Decorative animation: a ring of light bars breathing behind the screenshot",
     "pause": "Pause animation",
     "play": "Resume animation",
-    "exportNote": "Video export is in development."
+    "exportNote": "Video export is being tested.",
+    "screenDimensions": "vibrix · 1920×1080"
   },
   "Marquee": {
     "label": "What you can combine in Vibrix",
@@ -189,7 +191,7 @@
       },
       "export": {
         "question": "Can I export a video yet?",
-        "answer": "Video export is in development. The project currently lets you work with visualizers, scenes, and lyrics, and provides a clean output for capture with OBS."
+        "answer": "The development alpha includes experimental MP4 or WebM export, with limitations on layers and effects. It is still being tested and is not part of a published release yet. We’ll update this page when that version ships. A clean output for OBS capture is also available."
       },
       "rights": {
         "question": "What music and artwork can I use?",
@@ -214,5 +216,95 @@
     "title": "This frequency has gone quiet.",
     "description": "We couldn’t find the page you’re looking for.",
     "back": "Back to home"
+  },
+  "Features": {
+    "eyebrow": "Let the sound lead",
+    "title": "Everything you need\nto find your own style.",
+    "description": "Tools in the current editor, ready to explore at your own pace.",
+    "items": {
+      "spectrum": {
+        "title": "Audio-reactive spectra",
+        "description": "Explore linear, radial, and pixel families that respond to your project’s audio."
+      },
+      "lyrics": {
+        "title": "Synchronized lyrics",
+        "description": "Import your lyrics from Lyrixa and bring your edited timing into each scene."
+      },
+      "scenes": {
+        "title": "Scenes and backgrounds",
+        "description": "Combine images, visualizers, and looks to build the atmosphere of your song."
+      },
+      "controls": {
+        "title": "Your level of control",
+        "description": "Adjust color, shape, and response in advanced mode, or start with simple controls."
+      },
+      "privacy": {
+        "title": "Your audio stays with you",
+        "description": "Vibrix analyzes audio in your browser without uploading the file to a server."
+      },
+      "obs": {
+        "title": "Ready for a live scene",
+        "description": "Hide the interface in presentation mode and capture your scene with OBS."
+      }
+    }
+  },
+  "Comparison": {
+    "eyebrow": "Your device is the studio",
+    "title": "A local way\nto create.",
+    "description": "Where audio is processed changes the workflow. Here is how the two approaches differ.",
+    "caption": "Local processing in Vibrix compared with a server-rendered workflow",
+    "criterion": "The workflow",
+    "local": "Vibrix · local",
+    "cloud": "Server rendering",
+    "note": "A comparison of processing approaches, not specific providers or plans. Vibrix’s offline video export is still being tested; suite pricing is not yet defined.",
+    "rows": {
+      "processing": {
+        "label": "Processing",
+        "local": "Audio analysis and the scene run in your browser.",
+        "cloud": "The server performs the rendering job it receives."
+      },
+      "audio": {
+        "label": "Audio file",
+        "local": "Vibrix opens the file on your device. No upload is needed.",
+        "cloud": "The server needs access to the audio to include it in the render."
+      },
+      "cost": {
+        "label": "Resources",
+        "local": "Your device supplies the computing resources.",
+        "cloud": "The provider supplies the resources; the cost depends on its service."
+      },
+      "control": {
+        "label": "Preview",
+        "local": "Adjust the visualizer while the scene keeps playing.",
+        "cloud": "The preview workflow depends on the editor you choose."
+      }
+    }
+  },
+  "Waitlist": {
+    "eyebrow": "The next update, in your inbox",
+    "title": "Don’t miss\nthe next note.",
+    "description": "Get a heads-up when Vibrix launches or hear about Transcriptor: audio turned into lyrics to review in Lyrixa. No promised dates.",
+    "email": "Your email",
+    "songLanguage": "Language of your songs",
+    "interest": "Send me news about",
+    "interests": {
+      "launch": "Vibrix",
+      "transcriptor": "Transcriptor",
+      "both": "Both"
+    },
+    "languages": {
+      "es": "Spanish",
+      "en": "English",
+      "other": "Other"
+    },
+    "consent": "I want to receive my selected updates by email. I can unsubscribe at any time.",
+    "privacy": "We’ll store your email, language, and interest in Resend to manage these updates. We do not request or send your audio. Every update will include an unsubscribe link.",
+    "submit": "Join the waitlist",
+    "pending": "Saving…",
+    "success": "You’re on the list. We’ll let you know when there’s news.",
+    "invalid": "Check your email and confirm you want to receive updates.",
+    "unavailable": "The waitlist is not open yet. Check back soon.",
+    "error": "We couldn’t complete your signup. Please try again later.",
+    "website": "Leave this field empty"
   }
 }

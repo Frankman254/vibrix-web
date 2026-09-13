@@ -4,7 +4,8 @@
     "home": "Vibrix — Inicio",
     "openApp": "Abrir Vibrix",
     "explore": "Explorar la suite",
-    "skip": "Saltar al contenido"
+    "skip": "Saltar al contenido",
+    "joinWaitlist": "Avísame del lanzamiento"
   },
   "Metadata": {
     "title": "Vibrix — Tu música, hecha visual",
@@ -38,7 +39,8 @@
     "visualLabel": "Animación decorativa: un anillo de barras de luz que respira detrás de la captura",
     "pause": "Pausar animación",
     "play": "Reanudar animación",
-    "exportNote": "La exportación de vídeo está en desarrollo."
+    "exportNote": "Exportación de vídeo en pruebas.",
+    "screenDimensions": "vibrix · 1920×1080"
   },
   "Marquee": {
     "label": "Lo que puedes combinar en Vibrix",
@@ -189,7 +191,7 @@
       },
       "export": {
         "question": "¿Ya puedo exportar un vídeo?",
-        "answer": "La exportación de vídeo está en desarrollo. Hoy el proyecto permite trabajar con visualizadores, escenas y letras, y dispone de una salida para capturar con OBS."
+        "answer": "La alpha de desarrollo ya incluye exportación experimental a MP4 o WebM, con limitaciones de capas y efectos. Sigue en pruebas y aún no forma parte de una versión publicada. Actualizaremos esta página cuando salga esa versión. La salida para capturar con OBS también está disponible."
       },
       "rights": {
         "question": "¿Qué música y arte puedo usar?",
@@ -214,5 +216,95 @@
     "title": "Esta frecuencia está en silencio.",
     "description": "No encontramos la página que buscas.",
     "back": "Volver al inicio"
+  },
+  "Features": {
+    "eyebrow": "El sonido manda",
+    "title": "Todo lo que necesitas\npara encontrar tu estilo.",
+    "description": "Herramientas del editor actual, listas para explorar a tu ritmo.",
+    "items": {
+      "spectrum": {
+        "title": "Espectros reactivos",
+        "description": "Explora familias lineales, radiales y pixeladas que responden al audio de tu proyecto."
+      },
+      "lyrics": {
+        "title": "Letras sincronizadas",
+        "description": "Importa tu letra desde Lyrixa y acompaña cada escena con los tiempos que has editado."
+      },
+      "scenes": {
+        "title": "Escenas y fondos",
+        "description": "Combina imágenes, visualizadores y looks para construir la atmósfera de tu canción."
+      },
+      "controls": {
+        "title": "Control a tu medida",
+        "description": "Ajusta color, forma y respuesta en modo avanzado, o empieza con los controles simples."
+      },
+      "privacy": {
+        "title": "Tu audio, en tu equipo",
+        "description": "Vibrix analiza tu audio en el navegador, sin subir el archivo a un servidor."
+      },
+      "obs": {
+        "title": "Una salida para el directo",
+        "description": "Oculta la interfaz en el modo presentación y captura la escena desde OBS."
+      }
+    }
+  },
+  "Comparison": {
+    "eyebrow": "Tu equipo es el estudio",
+    "title": "Una forma local\nde crear.",
+    "description": "Dónde se procesa el audio cambia la forma de trabajar. Así se diferencian los dos flujos.",
+    "caption": "Procesamiento local en Vibrix y un flujo de render en servidor",
+    "criterion": "El flujo",
+    "local": "Vibrix · local",
+    "cloud": "Render en servidor",
+    "note": "Comparación de formas de procesamiento, no de proveedores o planes concretos. La exportación offline de Vibrix continúa en pruebas; los precios de la suite aún no están definidos.",
+    "rows": {
+      "processing": {
+        "label": "Procesamiento",
+        "local": "El análisis de audio y la escena se ejecutan en tu navegador.",
+        "cloud": "El servidor ejecuta el render que se le encarga."
+      },
+      "audio": {
+        "label": "Archivo de audio",
+        "local": "Vibrix abre el archivo de tu equipo. No necesita subirlo.",
+        "cloud": "El servidor necesita acceso al audio para incorporarlo al render."
+      },
+      "cost": {
+        "label": "Recursos",
+        "local": "Se utilizan los recursos de tu equipo.",
+        "cloud": "Se utilizan recursos del proveedor; el coste depende de su servicio."
+      },
+      "control": {
+        "label": "Vista previa",
+        "local": "Ajustas el visualizador mientras la escena se reproduce.",
+        "cloud": "La forma de previsualizar depende del editor elegido."
+      }
+    }
+  },
+  "Waitlist": {
+    "eyebrow": "Lo siguiente, a tu correo",
+    "title": "No te pierdas\nla próxima nota.",
+    "description": "Recibe el aviso de lanzamiento de Vibrix o las novedades del Transcriptor: audio convertido en letras para revisar en Lyrixa. Sin fechas prometidas.",
+    "email": "Tu correo",
+    "songLanguage": "Idioma de tus canciones",
+    "interest": "Quiero noticias de",
+    "interests": {
+      "launch": "Vibrix",
+      "transcriptor": "Transcriptor",
+      "both": "Ambos"
+    },
+    "languages": {
+      "es": "Español",
+      "en": "Inglés",
+      "other": "Otro"
+    },
+    "consent": "Quiero recibir por correo las novedades que he elegido. Podré darme de baja en cualquier momento.",
+    "privacy": "Guardaremos tu correo, idioma e interés en Resend para gestionar estos avisos. No se solicita ni se envía tu audio. Cada aviso incluirá un enlace para darte de baja.",
+    "submit": "Apuntarme a la lista",
+    "pending": "Guardando…",
+    "success": "Ya estás en la lista. Te avisaremos cuando haya novedades.",
+    "invalid": "Revisa tu correo y confirma que quieres recibir los avisos.",
+    "unavailable": "La lista de espera todavía no está abierta. Vuelve pronto.",
+    "error": "No hemos podido completar el registro. Inténtalo de nuevo más tarde.",
+    "website": "Deja este campo vacío"
   }
 }

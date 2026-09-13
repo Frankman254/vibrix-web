@@ -114,7 +114,7 @@ export async function Hero({ locale }: { locale: Locale }) {
                     </span>
                     {t('live')}
                   </span>
-                  <span>vibrix · 1920×1080</span>
+                  <span>{t('screenDimensions')}</span>
                 </div>
                 <div className="relative aspect-video">
                   <Image

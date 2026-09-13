@@ -1,7 +1,4 @@
-'use client';
-
-import { m } from 'motion/react';
-import { stagger, wordRise } from '@/lib/motion';
+import type { CSSProperties } from 'react';
 
 type WordRevealProps = {
   /** Líneas; cada palabra entra por separado. */
@@ -15,47 +12,37 @@ type WordRevealProps = {
  * separación cian/magenta del logo.
  */
 export function WordReveal({ lines, className, delay = 0.1 }: WordRevealProps) {
+  let wordCount = 0;
+  const timing = (): CSSProperties => ({
+    animationDelay: `${delay + wordCount++ * 0.08}s`,
+  });
+
   return (
-    <m.span
-      className={className}
-      initial="hidden"
-      animate="show"
-      variants={{
-        show: {
-          transition: {
-            ...stagger(0.08).show.transition,
-            delayChildren: delay,
-          },
-        },
-      }}
-    >
+    <span className={className}>
       {lines.map((line, lineIndex) => (
         <span key={lineIndex} className="block">
           {line.text.split(' ').map((word, wordIndex) => (
             <span
               key={`${word}-${wordIndex}`}
-              className="-mb-[0.12em] inline-block overflow-hidden pb-[0.12em] align-bottom"
+              className="-mb-[0.12em] inline-block pb-[0.12em] align-bottom"
             >
-              <m.span
-                variants={wordRise}
-                className="inline-block will-change-transform"
-              >
+              <span className="word-settle inline-block" style={timing()}>
                 {word}
-              </m.span>
+              </span>
               {' '}
             </span>
           ))}
           {line.chroma && (
-            <span className="-mb-[0.12em] inline-block overflow-hidden pb-[0.12em] align-bottom">
-              <m.span variants={wordRise} className="inline-block">
+            <span className="-mb-[0.12em] inline-block pb-[0.12em] align-bottom">
+              <span className="word-settle inline-block" style={timing()}>
                 <span className="chroma" data-text={line.chroma}>
                   {line.chroma}
                 </span>
-              </m.span>
+              </span>
             </span>
           )}
         </span>
       ))}
-    </m.span>
+    </span>
   );
 }

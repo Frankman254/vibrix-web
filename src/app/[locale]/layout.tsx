@@ -54,9 +54,33 @@ export async function generateMetadata({
       description: t('description'),
       type: 'website',
       locale,
-      images: [{ url: '/media/screens/hero.jpg', width: 1920, height: 1080 }],
+      url: `/${locale}`,
+      images: [
+        {
+          url: `/${locale}/opengraph-image`,
+          width: 1200,
+          height: 630,
+          alt: t('title'),
+        },
+      ],
     },
-    icons: { apple: '/brand/vibrix-logo-192.png' },
+    twitter: {
+      card: 'summary_large_image',
+      title: t('title'),
+      description: t('description'),
+      images: [{ url: `/${locale}/opengraph-image`, alt: t('title') }],
+    },
+    icons: {
+      icon: [
+        {
+          url: '/favicon.ico',
+          sizes: '16x16 32x32 48x48',
+          type: 'image/x-icon',
+        },
+        { url: '/icon.svg', sizes: 'any', type: 'image/svg+xml' },
+      ],
+      apple: '/brand/vibrix-logo-192.png',
+    },
     robots: site.indexable ? undefined : { index: false, follow: false },
   };
 }

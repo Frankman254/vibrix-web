@@ -194,3 +194,21 @@ body {
     display: none;
   }
 }
+
+/* Visible desde el servidor: el asentamiento no oculta las palabras. */
+.word-settle {
+  animation: word-settle 900ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@keyframes word-settle {
+  from {
+    transform: translateY(0.12em);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .word-settle {
+    animation: none;
+  }
+}

@@ -46,10 +46,10 @@ export async function FinalCta({ locale }: { locale: Locale }) {
             </p>
             <div className="mt-10 flex flex-col gap-3 sm:flex-row">
               <a
-                href={appUrl ? '/app' : `/${locale}#suite`}
+                href={appUrl ? '/app' : `/${locale}#waitlist`}
                 className="group inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-fg px-6 text-sm font-semibold text-accent-fg transition-transform duration-300 hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
               >
-                {common(appUrl ? 'openApp' : 'explore')}
+                {common(appUrl ? 'openApp' : 'joinWaitlist')}
                 <ArrowUpRight aria-hidden="true" size={17} />
               </a>
               <a
