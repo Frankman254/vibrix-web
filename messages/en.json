@@ -1,0 +1,80 @@
+{
+  "Common": {
+    "brand": "Vibrix",
+    "home": "Vibrix — Home",
+    "openApp": "Open Vibrix",
+    "explore": "Explore the suite",
+    "skip": "Skip to content"
+  },
+  "Metadata": {
+    "title": "Vibrix — Give your music a visual world",
+    "description": "Audio-reactive visuals and lyrics synced in Lyrixa. Discover Vibrix, a creative suite that brings your music to life in your browser."
+  },
+  "Navigation": {
+    "label": "Main navigation",
+    "suite": "The suite",
+    "workflow": "How it works",
+    "faq": "FAQ",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "menuTitle": "Explore Vibrix",
+    "language": "Language",
+    "switchLocale": "Switch to {locale}",
+    "localeName": "English"
+  },
+  "Hero": {
+    "eyebrow": "Made for your music",
+    "titleStart": "Your music,",
+    "titleEnd": "made visual.",
+    "description": "Give your sound a world of its own. Audio-reactive visuals, scenes, and lyrics synced in Lyrixa. All in your browser.",
+    "secondary": "Discover the process",
+    "privacy": "Your audio stays on your device",
+    "status": "Alpha · In development",
+    "visualLabel": "Visual exploration: a circular spectrum of cyan light gently breathing",
+    "pause": "Pause animation",
+    "play": "Resume animation",
+    "visualCaption": "Sound takes shape",
+    "visualNote": "Visual exploration · no audio",
+    "exportNote": "Video export is in development."
+  },
+  "Workflow": {
+    "eyebrow": "From the first note to the final verse",
+    "title": "One flow. Your own vision.",
+    "steps": {
+      "audio": { "number": "01", "title": "Start with sound", "description": "Open a local audio file in Vibrix and watch the visualizer respond." },
+      "lyrics": { "number": "02", "title": "Find the perfect timing", "description": "Edit your lyrics’ timing in Lyrixa, then bring them into your scene." },
+      "visual": { "number": "03", "title": "Make it yours", "description": "Combine visualizers, backgrounds, and lyrics to create your signature look." }
+    }
+  },
+  "Suite": {
+    "eyebrow": "Meet the suite",
+    "title": "Every part of your music.\nIn its element.",
+    "description": "Connected tools with one purpose: giving your sound something to show.",
+    "vibrix": { "name": "Vibrix", "role": "The visual world", "description": "Visualizers that respond to your audio, scenes, and a clean output for OBS.", "status": "In development · Alpha" },
+    "lyrixa": { "name": "Lyrixa", "role": "Every word, in time", "description": "A space to edit and sync your lyrics before bringing them into Vibrix.", "status": "Part of the suite" },
+    "transcriptor": { "name": "Transcriptor", "role": "The starting point", "description": "We’re building a tool to turn audio into synchronized lyrics with AI.", "status": "Coming soon" }
+  },
+  "Faq": {
+    "eyebrow": "Before you press play",
+    "title": "A few more notes.",
+    "items": {
+      "install": { "question": "Do I need to install anything?", "answer": "Vibrix and Lyrixa are designed to run in your browser. The suite is in development; this website introduces the tools while we prepare for launch." },
+      "privacy": { "question": "Is my audio uploaded to a server?", "answer": "Vibrix processes the audio you open locally in your browser. The upcoming Transcriptor will provide its own processing details before it becomes available." },
+      "export": { "question": "Can I export a video yet?", "answer": "Video export is in development. The project currently lets you work with visualizers, scenes, and lyrics, and provides a clean output for capture with OBS." },
+      "rights": { "question": "What music and artwork can I use?", "answer": "Use your own music and images, or content you have permission to use. You are responsible for the rights to the content you use and publish." }
+    }
+  },
+  "Footer": {
+    "description": "A visual universe for your music.",
+    "navigation": "Footer navigation",
+    "status": "The suite is taking shape.",
+    "copyright": "© {year} Vibrix",
+    "madeBy": "Created by Frankman"
+  },
+  "NotFound": {
+    "code": "404",
+    "title": "This frequency has gone quiet.",
+    "description": "We couldn’t find the page you’re looking for.",
+    "back": "Back to home"
+  }
+}

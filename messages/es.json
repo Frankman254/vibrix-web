@@ -1,0 +1,80 @@
+{
+  "Common": {
+    "brand": "Vibrix",
+    "home": "Vibrix — Inicio",
+    "openApp": "Abrir Vibrix",
+    "explore": "Explorar la suite",
+    "skip": "Saltar al contenido"
+  },
+  "Metadata": {
+    "title": "Vibrix — Tu música, hecha visual",
+    "description": "Visualizadores reactivos y letras sincronizadas desde Lyrixa. Descubre Vibrix, una suite creativa para dar forma a tu música en el navegador."
+  },
+  "Navigation": {
+    "label": "Navegación principal",
+    "suite": "La suite",
+    "workflow": "Cómo funciona",
+    "faq": "FAQ",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "menuTitle": "Explora Vibrix",
+    "language": "Idioma",
+    "switchLocale": "Cambiar a {locale}",
+    "localeName": "Español"
+  },
+  "Hero": {
+    "eyebrow": "Hecho para tu música",
+    "titleStart": "Tu música,",
+    "titleEnd": "hecha visual.",
+    "description": "Dale forma a lo que suena. Visualizadores reactivos, escenas y letras sincronizadas desde Lyrixa. Todo, en tu navegador.",
+    "secondary": "Descubre el proceso",
+    "privacy": "Tu audio se queda en tu equipo",
+    "status": "Alpha · En desarrollo",
+    "visualLabel": "Exploración visual: un espectro circular de luz cian que respira suavemente",
+    "pause": "Pausar animación",
+    "play": "Reanudar animación",
+    "visualCaption": "Sonido que toma forma",
+    "visualNote": "Exploración visual · sin audio",
+    "exportNote": "La exportación de vídeo está en desarrollo."
+  },
+  "Workflow": {
+    "eyebrow": "De la primera nota al último verso",
+    "title": "Un flujo. Tu propia visión.",
+    "steps": {
+      "audio": { "number": "01", "title": "Empieza por el sonido", "description": "Abre tu audio local en Vibrix y mira cómo responde el visualizador." },
+      "lyrics": { "number": "02", "title": "Encuentra la sincronía", "description": "Edita los tiempos de tu letra en Lyrixa e impórtala a tu escena." },
+      "visual": { "number": "03", "title": "Hazlo tuyo", "description": "Combina visualizadores, fondos y letras para darle tu identidad." }
+    }
+  },
+  "Suite": {
+    "eyebrow": "Conoce la suite",
+    "title": "Cada parte de tu música.\nEn su elemento.",
+    "description": "Herramientas conectadas por un mismo propósito: que tu sonido también se vea.",
+    "vibrix": { "name": "Vibrix", "role": "El mundo visual", "description": "Visualizadores que reaccionan a tu audio, escenas y una salida limpia para OBS.", "status": "En desarrollo · Alpha" },
+    "lyrixa": { "name": "Lyrixa", "role": "La letra, a tiempo", "description": "Un espacio para editar y sincronizar tus letras antes de llevarlas a Vibrix.", "status": "Parte de la suite" },
+    "transcriptor": { "name": "Transcriptor", "role": "El punto de partida", "description": "Estamos preparando una herramienta para convertir audio en letras sincronizadas con IA.", "status": "Próximamente" }
+  },
+  "Faq": {
+    "eyebrow": "Antes de darle al play",
+    "title": "Unas notas más.",
+    "items": {
+      "install": { "question": "¿Necesito instalar algo?", "answer": "Vibrix y Lyrixa están diseñados para usarse desde el navegador. La suite está en desarrollo; esta web presenta las herramientas mientras preparamos su lanzamiento." },
+      "privacy": { "question": "¿Se sube mi audio a un servidor?", "answer": "Vibrix procesa el audio que abres de forma local en tu navegador. El futuro Transcriptor tendrá su propia información de procesamiento antes de estar disponible." },
+      "export": { "question": "¿Ya puedo exportar un vídeo?", "answer": "La exportación de vídeo está en desarrollo. Hoy el proyecto permite trabajar con visualizadores, escenas y letras, y dispone de una salida para capturar con OBS." },
+      "rights": { "question": "¿Qué música y arte puedo usar?", "answer": "Usa música e imágenes propias o para las que tengas los permisos necesarios. Eres responsable de los derechos del contenido que utilices y publiques." }
+    }
+  },
+  "Footer": {
+    "description": "Un universo visual para tu música.",
+    "navigation": "Enlaces del pie de página",
+    "status": "La suite está tomando forma.",
+    "copyright": "© {year} Vibrix",
+    "madeBy": "Creado por Frankman"
+  },
+  "NotFound": {
+    "code": "404",
+    "title": "Esta frecuencia está en silencio.",
+    "description": "No encontramos la página que buscas.",
+    "back": "Volver al inicio"
+  }
+}
