@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import { m, useReducedMotion, useScroll, useTransform } from "motion/react";
+import { m, useReducedMotion, useScroll, useTransform } from 'motion/react';
 
 export function HeaderBackdrop() {
   const { scrollY } = useScroll();

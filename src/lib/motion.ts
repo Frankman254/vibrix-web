@@ -8,3 +8,9 @@ export const fadeUp = {
 export const stagger = (delay = 0.06) => ({
   show: { transition: { staggerChildren: delay } },
 });
+
+/** Palabra que sube desde detrás de una máscara (ver <WordReveal>). */
+export const wordRise = {
+  hidden: { y: '110%', opacity: 0 },
+  show: { y: '0%', opacity: 1, transition: { duration: 0.9, ease } },
+};

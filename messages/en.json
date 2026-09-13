@@ -7,13 +7,14 @@
     "skip": "Skip to content"
   },
   "Metadata": {
-    "title": "Vibrix — Give your music a visual world",
-    "description": "Audio-reactive visuals and lyrics synced in Lyrixa. Discover Vibrix, a creative suite that brings your music to life in your browser."
+    "title": "Vibrix — Your music, made visual",
+    "description": "Visuals that react to your audio, scenes, and lyrics synced in Lyrixa. A creative suite that brings your music to life in your browser."
   },
   "Navigation": {
     "label": "Main navigation",
-    "suite": "The suite",
+    "showcase": "Visuals",
     "workflow": "How it works",
+    "suite": "The suite",
     "faq": "FAQ",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
@@ -25,44 +26,181 @@
   "Hero": {
     "eyebrow": "Made for your music",
     "titleStart": "Your music,",
-    "titleEnd": "made visual.",
-    "description": "Give your sound a world of its own. Audio-reactive visuals, scenes, and lyrics synced in Lyrixa. All in your browser.",
-    "secondary": "Discover the process",
+    "titleMid": "made",
+    "titleEnd": "visual.",
+    "description": "Give your sound a shape. Visuals that react to every hit, scenes, and lyrics synced in Lyrixa. All in your browser.",
+    "secondary": "See the visuals",
     "privacy": "Your audio stays on your device",
     "status": "Alpha · In development",
-    "visualLabel": "Visual exploration: a circular spectrum of cyan light gently breathing",
+    "screenAlt": "Vibrix screenshot: a cyan and magenta radial spectrum around the logo, reacting to a track",
+    "screenTag": "Real app screenshot",
+    "live": "Live",
+    "visualLabel": "Decorative animation: a ring of light bars breathing behind the screenshot",
     "pause": "Pause animation",
     "play": "Resume animation",
-    "visualCaption": "Sound takes shape",
-    "visualNote": "Visual exploration · no audio",
     "exportNote": "Video export is in development."
+  },
+  "Marquee": {
+    "label": "What you can combine in Vibrix",
+    "items": [
+      "Radial bars",
+      "Oscilloscope",
+      "Tunnel",
+      "Liquid",
+      "Orbital",
+      "Spiral",
+      "LED equalizer",
+      "Scenes",
+      "Looks",
+      "Clean output for OBS",
+      "Lyrixa lyrics"
+    ]
+  },
+  "Showcase": {
+    "eyebrow": "A visual for every song",
+    "title": "Six spectrum families.\nEndless combinations.",
+    "description": "Every image in this section is a Vibrix screenshot reacting to a track. Pick a shape and watch the scene change.",
+    "listLabel": "Spectrum variants",
+    "pause": "Pause autoplay",
+    "play": "Resume autoplay",
+    "alt": "Vibrix screenshot with the {name} spectrum",
+    "items": {
+      "radial": {
+        "name": "Radial bars",
+        "family": "Classic",
+        "description": "A ring of bars around your logo that follows every hit."
+      },
+      "scope": {
+        "name": "Oscilloscope",
+        "family": "Oscilloscope",
+        "description": "The waveform drawn in real time, layer over layer."
+      },
+      "tunnel": {
+        "name": "Tunnel",
+        "family": "Tunnel",
+        "description": "Concentric rings sinking toward the center."
+      },
+      "liquid": {
+        "name": "Liquid",
+        "family": "Liquid",
+        "description": "Outlines that bend with the low end."
+      },
+      "orbital": {
+        "name": "Orbital",
+        "family": "Orbital",
+        "description": "Orbiting dots that open up with the track’s energy."
+      },
+      "spiral": {
+        "name": "Spiral",
+        "family": "Spiral",
+        "description": "A spiral of dots turning out from the logo."
+      },
+      "linear": {
+        "name": "Linear capsules",
+        "family": "Classic",
+        "description": "A horizontal equalizer with an edge-to-edge gradient."
+      },
+      "pixel": {
+        "name": "LED equalizer",
+        "family": "Classic · Pixel",
+        "description": "Fixed cells, like a retro studio display."
+      }
+    }
   },
   "Workflow": {
     "eyebrow": "From the first note to the final verse",
     "title": "One flow. Your own vision.",
     "steps": {
-      "audio": { "number": "01", "title": "Start with sound", "description": "Open a local audio file in Vibrix and watch the visualizer respond." },
-      "lyrics": { "number": "02", "title": "Find the perfect timing", "description": "Edit your lyrics’ timing in Lyrixa, then bring them into your scene." },
-      "visual": { "number": "03", "title": "Make it yours", "description": "Combine visualizers, backgrounds, and lyrics to create your signature look." }
+      "audio": {
+        "number": "01",
+        "title": "Start with sound",
+        "description": "Open a local audio file in Vibrix and watch the visualizer respond."
+      },
+      "lyrics": {
+        "number": "02",
+        "title": "Find the perfect timing",
+        "description": "Edit your lyrics’ timing in Lyrixa, then bring them into your scene."
+      },
+      "visual": {
+        "number": "03",
+        "title": "Make it yours",
+        "description": "Combine visualizers, backgrounds, and lyrics to create your signature look."
+      }
+    }
+  },
+  "Editor": {
+    "eyebrow": "The editor",
+    "title": "Fine control when you want it.\nOne click when you don’t.",
+    "description": "Switch between simple and advanced mode. Tune the color, shape, and response of each spectrum while the scene keeps playing.",
+    "alt": "Screenshot of the Vibrix editor with the Spectrum tab open next to the live scene",
+    "points": {
+      "slots": {
+        "title": "Saved slots",
+        "description": "Save your spectrum setups and come back to them in one click."
+      },
+      "scenes": {
+        "title": "Scenes and looks",
+        "description": "Group background, spectrum, and motion to switch the mood instantly."
+      },
+      "obs": {
+        "title": "Clean output for OBS",
+        "description": "Presentation mode hides the interface so you can capture or stream live."
+      },
+      "local": {
+        "title": "Fully local",
+        "description": "Audio analysis happens in your browser. Nothing is uploaded."
+      }
     }
   },
   "Suite": {
     "eyebrow": "Meet the suite",
     "title": "Every part of your music.\nIn its element.",
     "description": "Connected tools with one purpose: giving your sound something to show.",
-    "vibrix": { "name": "Vibrix", "role": "The visual world", "description": "Visualizers that respond to your audio, scenes, and a clean output for OBS.", "status": "In development · Alpha" },
-    "lyrixa": { "name": "Lyrixa", "role": "Every word, in time", "description": "A space to edit and sync your lyrics before bringing them into Vibrix.", "status": "Part of the suite" },
-    "transcriptor": { "name": "Transcriptor", "role": "The starting point", "description": "We’re building a tool to turn audio into synchronized lyrics with AI.", "status": "Coming soon" }
+    "vibrix": {
+      "name": "Vibrix",
+      "role": "The visual world",
+      "description": "Visualizers that respond to your audio, scenes, and a clean output for OBS.",
+      "status": "In development · Alpha"
+    },
+    "lyrixa": {
+      "name": "Lyrixa",
+      "role": "Every word, in time",
+      "description": "A space to edit and sync your lyrics before bringing them into Vibrix.",
+      "status": "Part of the suite"
+    },
+    "transcriptor": {
+      "name": "Transcriptor",
+      "role": "The starting point",
+      "description": "We’re building a tool to turn audio into synchronized lyrics with AI.",
+      "status": "Coming soon"
+    }
   },
   "Faq": {
     "eyebrow": "Before you press play",
     "title": "A few more notes.",
     "items": {
-      "install": { "question": "Do I need to install anything?", "answer": "Vibrix and Lyrixa are designed to run in your browser. The suite is in development; this website introduces the tools while we prepare for launch." },
-      "privacy": { "question": "Is my audio uploaded to a server?", "answer": "Vibrix processes the audio you open locally in your browser. The upcoming Transcriptor will provide its own processing details before it becomes available." },
-      "export": { "question": "Can I export a video yet?", "answer": "Video export is in development. The project currently lets you work with visualizers, scenes, and lyrics, and provides a clean output for capture with OBS." },
-      "rights": { "question": "What music and artwork can I use?", "answer": "Use your own music and images, or content you have permission to use. You are responsible for the rights to the content you use and publish." }
+      "install": {
+        "question": "Do I need to install anything?",
+        "answer": "Vibrix and Lyrixa are designed to run in your browser. The suite is in development; this website introduces the tools while we prepare for launch."
+      },
+      "privacy": {
+        "question": "Is my audio uploaded to a server?",
+        "answer": "Vibrix processes the audio you open locally in your browser. The upcoming Transcriptor will provide its own processing details before it becomes available."
+      },
+      "export": {
+        "question": "Can I export a video yet?",
+        "answer": "Video export is in development. The project currently lets you work with visualizers, scenes, and lyrics, and provides a clean output for capture with OBS."
+      },
+      "rights": {
+        "question": "What music and artwork can I use?",
+        "answer": "Use your own music and images, or content you have permission to use. You are responsible for the rights to the content you use and publish."
+      }
     }
+  },
+  "FinalCta": {
+    "title": "Your next song already has a shape.",
+    "description": "Vibrix is taking shape. Explore the suite and follow along until launch.",
+    "secondary": "Back to top"
   },
   "Footer": {
     "description": "A visual universe for your music.",

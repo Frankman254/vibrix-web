@@ -20,7 +20,8 @@
   --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
 
   --radius-card: 1.25rem;
-  --shadow-glow: 0 0 24px color-mix(in srgb, var(--color-accent) 35%, transparent);
+  --shadow-glow: 0 0 24px
+    color-mix(in srgb, var(--color-accent) 35%, transparent);
 
   --animate-marquee: marquee 38s linear infinite;
 }

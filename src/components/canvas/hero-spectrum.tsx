@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import { Pause, Play } from "lucide-react";
-import { useEffect, useRef, useState, useSyncExternalStore } from "react";
+import { Pause, Play } from 'lucide-react';
+import { useEffect, useRef, useState, useSyncExternalStore } from 'react';
 
 type HeroSpectrumProps = {
   label: string;
@@ -9,15 +9,15 @@ type HeroSpectrumProps = {
   playLabel: string;
 };
 
-const REDUCED_MOTION_QUERY = "(prefers-reduced-motion: reduce)";
+const REDUCED_MOTION_QUERY = '(prefers-reduced-motion: reduce)';
 const FRAME_INTERVAL = 1000 / 30;
 const BAR_COUNT = 128;
 const FULL_CIRCLE = Math.PI * 2;
 
 function subscribeToMotionPreference(onChange: () => void) {
   const preference = window.matchMedia(REDUCED_MOTION_QUERY);
-  preference.addEventListener("change", onChange);
-  return () => preference.removeEventListener("change", onChange);
+  preference.addEventListener('change', onChange);
+  return () => preference.removeEventListener('change', onChange);
 }
 
 function getMotionPreference() {
@@ -47,7 +47,7 @@ export function HeroSpectrum({
   useEffect(() => {
     const canvas = canvasRef.current;
     const container = imageRef.current;
-    const context = canvas?.getContext("2d", { alpha: true });
+    const context = canvas?.getContext('2d', { alpha: true });
 
     if (!canvas || !container || !context) return;
 
@@ -70,10 +70,10 @@ export function HeroSpectrum({
       context.scale(scale, scale);
 
       const halo = context.createRadialGradient(0, 0, 98, 0, 0, 252);
-      halo.addColorStop(0, "rgba(103, 232, 249, 0)");
-      halo.addColorStop(0.3, "rgba(36, 179, 205, 0.075)");
-      halo.addColorStop(0.65, "rgba(36, 179, 205, 0.025)");
-      halo.addColorStop(1, "rgba(36, 179, 205, 0)");
+      halo.addColorStop(0, 'rgba(103, 232, 249, 0)');
+      halo.addColorStop(0.3, 'rgba(36, 179, 205, 0.075)');
+      halo.addColorStop(0.65, 'rgba(36, 179, 205, 0.025)');
+      halo.addColorStop(1, 'rgba(36, 179, 205, 0)');
       context.fillStyle = halo;
       context.fillRect(-280, -280, 560, 560);
 
@@ -83,8 +83,8 @@ export function HeroSpectrum({
         context.arc(0, 0, radius, 0, FULL_CIRCLE);
         context.strokeStyle =
           radius === 124
-            ? "rgba(103, 232, 249, 0.27)"
-            : "rgba(103, 232, 249, 0.075)";
+            ? 'rgba(103, 232, 249, 0.27)'
+            : 'rgba(103, 232, 249, 0.075)';
         context.lineWidth = 0.7;
         context.stroke();
       }
@@ -94,7 +94,7 @@ export function HeroSpectrum({
       context.setLineDash([1, 12]);
       context.beginPath();
       context.arc(0, 0, 260, 0, FULL_CIRCLE);
-      context.strokeStyle = "rgba(145, 187, 201, 0.23)";
+      context.strokeStyle = 'rgba(145, 187, 201, 0.23)';
       context.lineWidth = 1.5;
       context.stroke();
       context.restore();
@@ -119,15 +119,14 @@ export function HeroSpectrum({
         context.stroke();
       }
 
-      context.lineCap = "round";
+      context.lineCap = 'round';
       for (let index = 0; index < BAR_COUNT; index += 1) {
         const angle = (index / BAR_COUNT) * FULL_CIRCLE - Math.PI / 2;
         const shape =
           Math.pow((Math.sin(angle * 3 - 0.8) + 1) / 2, 2) * 38 +
           ((Math.sin(angle * 7 + 0.6) + 1) / 2) * 19;
         const detail = (Math.sin(index * 2.17) + 1) * 7;
-        const breath =
-          0.76 + Math.sin(time * 0.7 + angle * 2) * 0.15;
+        const breath = 0.76 + Math.sin(time * 0.7 + angle * 2) * 0.15;
         const length = 8 + (shape + detail) * breath;
         const radius = 132;
         const cosine = Math.cos(angle);
@@ -138,7 +137,7 @@ export function HeroSpectrum({
         context.moveTo(cosine * radius, sine * radius);
         context.lineTo(cosine * (radius + length), sine * (radius + length));
         context.strokeStyle = magenta
-          ? "rgba(244, 114, 182, 0.58)"
+          ? 'rgba(244, 114, 182, 0.58)'
           : `rgba(103, 232, 249, ${0.35 + (length / 80) * 0.6})`;
         context.lineWidth = 2.3;
         context.stroke();
@@ -146,8 +145,11 @@ export function HeroSpectrum({
         // A low-opacity reflection makes the inner edge feel finely engraved.
         context.beginPath();
         context.moveTo(cosine * 120, sine * 120);
-        context.lineTo(cosine * (120 - length * 0.18), sine * (120 - length * 0.18));
-        context.strokeStyle = "rgba(103, 232, 249, 0.12)";
+        context.lineTo(
+          cosine * (120 - length * 0.18),
+          sine * (120 - length * 0.18),
+        );
+        context.strokeStyle = 'rgba(103, 232, 249, 0.12)';
         context.lineWidth = 1;
         context.stroke();
       }
@@ -161,7 +163,7 @@ export function HeroSpectrum({
         context.lineTo(x + 3, y);
         context.moveTo(x, y - 3);
         context.lineTo(x, y + 3);
-        context.strokeStyle = "rgba(156, 195, 208, 0.3)";
+        context.strokeStyle = 'rgba(156, 195, 208, 0.3)';
         context.lineWidth = 0.8;
         context.stroke();
       }
@@ -175,7 +177,7 @@ export function HeroSpectrum({
         !paused &&
         !reducedMotion &&
         inView &&
-        document.visibilityState === "visible"
+        document.visibilityState === 'visible'
       );
     }
 
@@ -223,23 +225,32 @@ export function HeroSpectrum({
     resize();
     resizeObserver.observe(container);
     intersectionObserver.observe(container);
-    document.addEventListener("visibilitychange", syncAnimation);
-    window.addEventListener("resize", resize);
+    document.addEventListener('visibilitychange', syncAnimation);
+    window.addEventListener('resize', resize);
 
     return () => {
       disposed = true;
       if (frame) cancelAnimationFrame(frame);
       resizeObserver.disconnect();
       intersectionObserver.disconnect();
-      document.removeEventListener("visibilitychange", syncAnimation);
-      window.removeEventListener("resize", resize);
+      document.removeEventListener('visibilitychange', syncAnimation);
+      window.removeEventListener('resize', resize);
     };
   }, [paused, reducedMotion]);
 
   return (
     <div className="relative w-full">
-      <div ref={imageRef} role="img" aria-label={label} className="aspect-square w-full">
-        <canvas ref={canvasRef} aria-hidden="true" className="block h-full w-full" />
+      <div
+        ref={imageRef}
+        role="img"
+        aria-label={label}
+        className="aspect-square w-full"
+      >
+        <canvas
+          ref={canvasRef}
+          aria-hidden="true"
+          className="block h-full w-full"
+        />
       </div>
       {!reducedMotion && (
         <button

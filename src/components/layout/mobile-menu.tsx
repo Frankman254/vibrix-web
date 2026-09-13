@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import { ArrowUpRight, Menu, X } from "lucide-react";
-import { m, useReducedMotion } from "motion/react";
-import { useId, useRef, useState } from "react";
+import { ArrowUpRight, Menu, X } from 'lucide-react';
+import { m, useReducedMotion } from 'motion/react';
+import { useId, useRef, useState } from 'react';
 
 type MenuLink = {
   href: string;
@@ -10,7 +10,7 @@ type MenuLink = {
 };
 
 type LanguageLink = MenuLink & {
-  locale: "es" | "en";
+  locale: 'es' | 'en';
   current: boolean;
   accessibleLabel: string;
 };
@@ -136,9 +136,9 @@ export function MobileMenu({
                   hrefLang={language.locale}
                   lang={language.locale}
                   aria-label={language.accessibleLabel}
-                  aria-current={language.current ? "page" : undefined}
+                  aria-current={language.current ? 'page' : undefined}
                   onClick={closeMenu}
-                  className={`inline-flex min-h-11 items-center rounded-full px-4 text-sm transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent ${language.current ? "bg-surface-2 text-fg" : "text-fg-mute hover:text-fg"}`}
+                  className={`inline-flex min-h-11 items-center rounded-full px-4 text-sm transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent ${language.current ? 'bg-surface-2 text-fg' : 'text-fg-mute hover:text-fg'}`}
                 >
                   {language.label}
                 </a>

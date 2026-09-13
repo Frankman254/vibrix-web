@@ -1,16 +1,18 @@
-import Image from "next/image";
-import { getTranslations } from "next-intl/server";
+import type { Locale } from '@/i18n/routing';
+import Image from 'next/image';
+import { getTranslations } from 'next-intl/server';
 
-export async function Footer({ locale }: { locale: "es" | "en" }) {
+export async function Footer({ locale }: { locale: Locale }) {
   const [common, footer, navigation] = await Promise.all([
-    getTranslations("Common"),
-    getTranslations("Footer"),
-    getTranslations("Navigation"),
+    getTranslations('Common'),
+    getTranslations('Footer'),
+    getTranslations('Navigation'),
   ]);
   const links = [
-    { href: `/${locale}#suite`, label: navigation("suite") },
-    { href: `/${locale}#workflow`, label: navigation("workflow") },
-    { href: `/${locale}#faq`, label: navigation("faq") },
+    { href: `/${locale}#showcase`, label: navigation('showcase') },
+    { href: `/${locale}#workflow`, label: navigation('workflow') },
+    { href: `/${locale}#suite`, label: navigation('suite') },
+    { href: `/${locale}#faq`, label: navigation('faq') },
   ];
 
   return (
@@ -20,7 +22,7 @@ export async function Footer({ locale }: { locale: "es" | "en" }) {
           <div className="max-w-sm">
             <a
               href={`/${locale}`}
-              aria-label={common("home")}
+              aria-label={common('home')}
               className="inline-flex items-center gap-2.5 rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
             >
               <Image
@@ -30,15 +32,15 @@ export async function Footer({ locale }: { locale: "es" | "en" }) {
                 height={32}
               />
               <span className="font-display text-[1.4rem] font-semibold tracking-[-0.06em] text-fg">
-                {common("brand")}
+                {common('brand')}
               </span>
             </a>
             <p className="mt-4 text-sm leading-6 text-fg-mute">
-              {footer("description")}
+              {footer('description')}
             </p>
           </div>
           <div className="flex flex-col gap-5 md:items-end">
-            <nav aria-label={footer("navigation")}>
+            <nav aria-label={footer('navigation')}>
               <ul className="flex flex-wrap items-center gap-x-7 gap-y-1">
                 {links.map((link) => (
                   <li key={link.href}>
@@ -57,13 +59,13 @@ export async function Footer({ locale }: { locale: "es" | "en" }) {
                 aria-hidden="true"
                 className="size-1.5 rounded-full bg-accent"
               />
-              {footer("status")}
+              {footer('status')}
             </p>
           </div>
         </div>
         <div className="flex flex-col justify-between gap-3 border-t border-line pt-6 text-xs text-fg-mute sm:flex-row sm:items-center">
-          <p>{footer("copyright", { year: new Date().getFullYear() })}</p>
-          <p>{footer("madeBy")}</p>
+          <p>{footer('copyright', { year: new Date().getFullYear() })}</p>
+          <p>{footer('madeBy')}</p>
         </div>
       </div>
     </footer>

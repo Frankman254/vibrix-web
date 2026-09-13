@@ -1,18 +1,29 @@
 'use client';
 
-import { m, useReducedMotion } from 'motion/react';
+import { m } from 'motion/react';
 import { ease } from '@/lib/motion';
 
-export function Reveal({ children, className }: { children: React.ReactNode; className?: string }) {
-  const reducedMotion = useReducedMotion();
+type RevealProps = {
+  children: React.ReactNode;
+  className?: string;
+  delay?: number;
+  y?: number;
+};
 
+/** Entrada al hacer scroll. MotionConfig reducedMotion="user" la anula. */
+export function Reveal({
+  children,
+  className,
+  delay = 0,
+  y = 28,
+}: RevealProps) {
   return (
     <m.div
       className={className}
-      initial={false}
-      whileInView={reducedMotion ? undefined : { y: [16, 0], opacity: [0.65, 1] }}
-      viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 0.6, ease }}
+      initial={{ opacity: 0, y }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.25 }}
+      transition={{ duration: 0.8, ease, delay }}
     >
       {children}
     </m.div>

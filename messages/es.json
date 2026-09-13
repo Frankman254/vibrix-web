@@ -8,12 +8,13 @@
   },
   "Metadata": {
     "title": "Vibrix — Tu música, hecha visual",
-    "description": "Visualizadores reactivos y letras sincronizadas desde Lyrixa. Descubre Vibrix, una suite creativa para dar forma a tu música en el navegador."
+    "description": "Visualizadores que reaccionan a tu audio, escenas y letras sincronizadas desde Lyrixa. Una suite creativa para dar forma a tu música en el navegador."
   },
   "Navigation": {
     "label": "Navegación principal",
-    "suite": "La suite",
+    "showcase": "Visuales",
     "workflow": "Cómo funciona",
+    "suite": "La suite",
     "faq": "FAQ",
     "openMenu": "Abrir menú",
     "closeMenu": "Cerrar menú",
@@ -25,44 +26,181 @@
   "Hero": {
     "eyebrow": "Hecho para tu música",
     "titleStart": "Tu música,",
-    "titleEnd": "hecha visual.",
-    "description": "Dale forma a lo que suena. Visualizadores reactivos, escenas y letras sincronizadas desde Lyrixa. Todo, en tu navegador.",
-    "secondary": "Descubre el proceso",
+    "titleMid": "hecha",
+    "titleEnd": "visual.",
+    "description": "Dale forma a lo que suena. Visualizadores que reaccionan a cada golpe, escenas y letras sincronizadas desde Lyrixa. Todo, en tu navegador.",
+    "secondary": "Ver los visuales",
     "privacy": "Tu audio se queda en tu equipo",
     "status": "Alpha · En desarrollo",
-    "visualLabel": "Exploración visual: un espectro circular de luz cian que respira suavemente",
+    "screenAlt": "Captura de Vibrix: espectro radial cian y magenta alrededor del logo, reaccionando a una pista",
+    "screenTag": "Captura real de la app",
+    "live": "En vivo",
+    "visualLabel": "Animación decorativa: un anillo de barras de luz que respira detrás de la captura",
     "pause": "Pausar animación",
     "play": "Reanudar animación",
-    "visualCaption": "Sonido que toma forma",
-    "visualNote": "Exploración visual · sin audio",
     "exportNote": "La exportación de vídeo está en desarrollo."
+  },
+  "Marquee": {
+    "label": "Lo que puedes combinar en Vibrix",
+    "items": [
+      "Barras radiales",
+      "Osciloscopio",
+      "Túnel",
+      "Líquido",
+      "Orbital",
+      "Espiral",
+      "Ecualizador LED",
+      "Escenas",
+      "Looks",
+      "Salida limpia para OBS",
+      "Letras de Lyrixa"
+    ]
+  },
+  "Showcase": {
+    "eyebrow": "Un visual para cada canción",
+    "title": "Seis familias de espectro.\nInfinitas combinaciones.",
+    "description": "Todas las imágenes de esta sección son capturas de Vibrix reaccionando a una pista. Elige una forma y mira cómo cambia la escena.",
+    "listLabel": "Variantes de espectro",
+    "pause": "Pausar el pase automático",
+    "play": "Reanudar el pase automático",
+    "alt": "Captura de Vibrix con el espectro {name}",
+    "items": {
+      "radial": {
+        "name": "Barras radiales",
+        "family": "Classic",
+        "description": "Un anillo de barras alrededor de tu logo que sigue cada golpe."
+      },
+      "scope": {
+        "name": "Osciloscopio",
+        "family": "Oscilloscope",
+        "description": "La forma de onda dibujada en tiempo real, capa sobre capa."
+      },
+      "tunnel": {
+        "name": "Túnel",
+        "family": "Tunnel",
+        "description": "Anillos concéntricos que se hunden hacia el centro."
+      },
+      "liquid": {
+        "name": "Líquido",
+        "family": "Liquid",
+        "description": "Contornos que se deforman con los graves."
+      },
+      "orbital": {
+        "name": "Orbital",
+        "family": "Orbital",
+        "description": "Puntos en órbita que se abren con la energía de la pista."
+      },
+      "spiral": {
+        "name": "Espiral",
+        "family": "Spiral",
+        "description": "Una espiral de puntos que gira desde el logo."
+      },
+      "linear": {
+        "name": "Cápsulas lineales",
+        "family": "Classic",
+        "description": "Un ecualizador horizontal con degradado de lado a lado."
+      },
+      "pixel": {
+        "name": "Ecualizador LED",
+        "family": "Classic · Pixel",
+        "description": "Celdas fijas, como una pantalla de estudio retro."
+      }
+    }
   },
   "Workflow": {
     "eyebrow": "De la primera nota al último verso",
     "title": "Un flujo. Tu propia visión.",
     "steps": {
-      "audio": { "number": "01", "title": "Empieza por el sonido", "description": "Abre tu audio local en Vibrix y mira cómo responde el visualizador." },
-      "lyrics": { "number": "02", "title": "Encuentra la sincronía", "description": "Edita los tiempos de tu letra en Lyrixa e impórtala a tu escena." },
-      "visual": { "number": "03", "title": "Hazlo tuyo", "description": "Combina visualizadores, fondos y letras para darle tu identidad." }
+      "audio": {
+        "number": "01",
+        "title": "Empieza por el sonido",
+        "description": "Abre tu audio local en Vibrix y mira cómo responde el visualizador."
+      },
+      "lyrics": {
+        "number": "02",
+        "title": "Encuentra la sincronía",
+        "description": "Edita los tiempos de tu letra en Lyrixa e impórtala a tu escena."
+      },
+      "visual": {
+        "number": "03",
+        "title": "Hazlo tuyo",
+        "description": "Combina visualizadores, fondos y letras para darle tu identidad."
+      }
+    }
+  },
+  "Editor": {
+    "eyebrow": "El editor",
+    "title": "Control fino cuando lo quieras.\nUn clic cuando no.",
+    "description": "Cambia entre modo simple y avanzado. Ajusta color, forma y reacción de cada espectro sin perder de vista la escena.",
+    "alt": "Captura del editor de Vibrix con la pestaña Spectrum abierta junto a la escena en vivo",
+    "points": {
+      "slots": {
+        "title": "Slots guardados",
+        "description": "Guarda tus ajustes de espectro y vuelve a ellos en un clic."
+      },
+      "scenes": {
+        "title": "Escenas y looks",
+        "description": "Agrupa fondo, espectro y movimiento para cambiar de ambiente al instante."
+      },
+      "obs": {
+        "title": "Salida limpia para OBS",
+        "description": "El modo presentación oculta la interfaz para capturar o emitir en directo."
+      },
+      "local": {
+        "title": "Todo en local",
+        "description": "El análisis del audio ocurre en tu navegador. Nada se sube."
+      }
     }
   },
   "Suite": {
     "eyebrow": "Conoce la suite",
     "title": "Cada parte de tu música.\nEn su elemento.",
     "description": "Herramientas conectadas por un mismo propósito: que tu sonido también se vea.",
-    "vibrix": { "name": "Vibrix", "role": "El mundo visual", "description": "Visualizadores que reaccionan a tu audio, escenas y una salida limpia para OBS.", "status": "En desarrollo · Alpha" },
-    "lyrixa": { "name": "Lyrixa", "role": "La letra, a tiempo", "description": "Un espacio para editar y sincronizar tus letras antes de llevarlas a Vibrix.", "status": "Parte de la suite" },
-    "transcriptor": { "name": "Transcriptor", "role": "El punto de partida", "description": "Estamos preparando una herramienta para convertir audio en letras sincronizadas con IA.", "status": "Próximamente" }
+    "vibrix": {
+      "name": "Vibrix",
+      "role": "El mundo visual",
+      "description": "Visualizadores que reaccionan a tu audio, escenas y una salida limpia para OBS.",
+      "status": "En desarrollo · Alpha"
+    },
+    "lyrixa": {
+      "name": "Lyrixa",
+      "role": "La letra, a tiempo",
+      "description": "Un espacio para editar y sincronizar tus letras antes de llevarlas a Vibrix.",
+      "status": "Parte de la suite"
+    },
+    "transcriptor": {
+      "name": "Transcriptor",
+      "role": "El punto de partida",
+      "description": "Estamos preparando una herramienta para convertir audio en letras sincronizadas con IA.",
+      "status": "Próximamente"
+    }
   },
   "Faq": {
     "eyebrow": "Antes de darle al play",
     "title": "Unas notas más.",
     "items": {
-      "install": { "question": "¿Necesito instalar algo?", "answer": "Vibrix y Lyrixa están diseñados para usarse desde el navegador. La suite está en desarrollo; esta web presenta las herramientas mientras preparamos su lanzamiento." },
-      "privacy": { "question": "¿Se sube mi audio a un servidor?", "answer": "Vibrix procesa el audio que abres de forma local en tu navegador. El futuro Transcriptor tendrá su propia información de procesamiento antes de estar disponible." },
-      "export": { "question": "¿Ya puedo exportar un vídeo?", "answer": "La exportación de vídeo está en desarrollo. Hoy el proyecto permite trabajar con visualizadores, escenas y letras, y dispone de una salida para capturar con OBS." },
-      "rights": { "question": "¿Qué música y arte puedo usar?", "answer": "Usa música e imágenes propias o para las que tengas los permisos necesarios. Eres responsable de los derechos del contenido que utilices y publiques." }
+      "install": {
+        "question": "¿Necesito instalar algo?",
+        "answer": "Vibrix y Lyrixa están diseñados para usarse desde el navegador. La suite está en desarrollo; esta web presenta las herramientas mientras preparamos su lanzamiento."
+      },
+      "privacy": {
+        "question": "¿Se sube mi audio a un servidor?",
+        "answer": "Vibrix procesa el audio que abres de forma local en tu navegador. El futuro Transcriptor tendrá su propia información de procesamiento antes de estar disponible."
+      },
+      "export": {
+        "question": "¿Ya puedo exportar un vídeo?",
+        "answer": "La exportación de vídeo está en desarrollo. Hoy el proyecto permite trabajar con visualizadores, escenas y letras, y dispone de una salida para capturar con OBS."
+      },
+      "rights": {
+        "question": "¿Qué música y arte puedo usar?",
+        "answer": "Usa música e imágenes propias o para las que tengas los permisos necesarios. Eres responsable de los derechos del contenido que utilices y publiques."
+      }
     }
+  },
+  "FinalCta": {
+    "title": "Tu próxima canción ya tiene forma.",
+    "description": "Vibrix está tomando forma. Explora la suite y sigue su evolución hasta el lanzamiento.",
+    "secondary": "Volver arriba"
   },
   "Footer": {
     "description": "Un universo visual para tu música.",
