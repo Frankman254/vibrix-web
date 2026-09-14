@@ -1,6 +1,7 @@
-import { Captions, Mic2 } from 'lucide-react';
+import { ArrowUpRight, Captions, Mic2 } from 'lucide-react';
 import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
+import { appUrl } from '@/config/links';
 
 import { Reveal } from '@/components/motion/reveal';
 import { Spotlight } from '@/components/motion/spotlight';
@@ -52,6 +53,8 @@ export async function Suite() {
                   status={t('vibrix.status')}
                   tone="live"
                   large
+                  href={appUrl}
+                  cta={t('vibrix.cta')}
                 />
               </Spotlight>
             </Reveal>
@@ -114,6 +117,8 @@ function SuiteText({
   status,
   tone,
   large,
+  href,
+  cta,
 }: {
   name: string;
   role: string;
@@ -121,6 +126,8 @@ function SuiteText({
   status: string;
   tone: 'live' | 'suite' | 'soon';
   large?: boolean;
+  href?: string;
+  cta?: string;
 }) {
   return (
     <div className={cn('flex flex-1 flex-col p-7', large && 'sm:p-9')}>
@@ -148,6 +155,21 @@ function SuiteText({
         />
         {status}
       </p>
+      {href && cta ? (
+        <a
+          href={href}
+          target="_blank"
+          rel="noopener"
+          className="group mt-4 inline-flex min-h-11 w-fit items-center gap-1.5 rounded-sm text-sm font-medium text-fg transition-colors hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
+        >
+          {cta}
+          <ArrowUpRight
+            aria-hidden="true"
+            size={15}
+            className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+          />
+        </a>
+      ) : null}
     </div>
   );
 }

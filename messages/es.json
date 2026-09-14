@@ -3,8 +3,8 @@
     "brand": "Vibrix",
     "home": "Vibrix — Inicio",
     "openApp": "Abrir Vibrix",
-    "explore": "Explorar la suite",
     "skip": "Saltar al contenido",
+    "external": "Se abre la aplicación Vibrix",
     "joinWaitlist": "Avísame del lanzamiento"
   },
   "Metadata": {
@@ -162,7 +162,8 @@
       "name": "Vibrix",
       "role": "El mundo visual",
       "description": "Visualizadores que reaccionan a tu audio, escenas y una salida limpia para OBS.",
-      "status": "En desarrollo · Alpha"
+      "status": "En desarrollo · Alpha",
+      "cta": "Abrir la app en vivo"
     },
     "lyrixa": {
       "name": "Lyrixa",
@@ -183,7 +184,7 @@
     "items": {
       "install": {
         "question": "¿Necesito instalar algo?",
-        "answer": "Vibrix y Lyrixa están diseñados para usarse desde el navegador. La suite está en desarrollo; esta web presenta las herramientas mientras preparamos su lanzamiento."
+        "answer": "No. Vibrix funciona en tu navegador: la alpha en vivo ya está abierta y no requiere instalación. Lyrixa forma parte de la suite y sigue en desarrollo."
       },
       "privacy": {
         "question": "¿Se sube mi audio a un servidor?",
@@ -201,7 +202,7 @@
   },
   "FinalCta": {
     "title": "Tu próxima canción ya tiene forma.",
-    "description": "Vibrix está tomando forma. Explora la suite y sigue su evolución hasta el lanzamiento.",
+    "description": "La alpha de Vibrix ya está en vivo, en tu navegador. Ábrela y dale forma visual a tu música.",
     "secondary": "Volver arriba"
   },
   "Footer": {

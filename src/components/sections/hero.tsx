@@ -3,10 +3,10 @@ import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 
 import { HeroSpectrum } from '@/components/canvas/hero-spectrum';
+import { appUrl } from '@/config/links';
 import { Reveal } from '@/components/motion/reveal';
 import { TiltFrame } from '@/components/motion/tilt-frame';
 import { WordReveal } from '@/components/motion/word-reveal';
-import { appUrl } from '@/config/links';
 import type { Locale } from '@/i18n/routing';
 
 export async function Hero({ locale }: { locale: Locale }) {
@@ -53,10 +53,13 @@ export async function Hero({ locale }: { locale: Locale }) {
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
               <a
-                href={appUrl ? '/app' : `/${locale}#suite`}
+                href={appUrl}
+                target="_blank"
+                rel="noopener"
+                title={common('external')}
                 className="group inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-fg px-6 text-sm font-semibold text-accent-fg shadow-[0_0_0_1px_rgb(255_255_255/0.2),0_18px_50px_-12px_rgb(103_232_249/0.55)] transition-transform duration-300 hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
               >
-                {common(appUrl ? 'openApp' : 'explore')}
+                {common('openApp')}
                 <ArrowUpRight
                   aria-hidden="true"
                   size={17}

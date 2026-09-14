@@ -7,6 +7,8 @@ import { useId, useRef, useState } from 'react';
 type MenuLink = {
   href: string;
   label: string;
+  external?: boolean;
+  title?: string;
 };
 
 type LanguageLink = MenuLink & {
@@ -147,6 +149,9 @@ export function MobileMenu({
           </div>
           <a
             href={action.href}
+            target={action.external ? '_blank' : undefined}
+            rel={action.external ? 'noopener' : undefined}
+            title={action.title}
             onClick={closeMenu}
             className="mt-6 flex min-h-12 items-center justify-center gap-3 rounded-full bg-accent px-5 text-sm font-semibold text-bg transition-colors hover:bg-accent/90 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
           >

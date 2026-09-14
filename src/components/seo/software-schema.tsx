@@ -1,4 +1,5 @@
 import { getTranslations } from 'next-intl/server';
+import { appUrl } from '@/config/links';
 import { site } from '@/config/site';
 import type { Locale } from '@/i18n/routing';
 
@@ -17,6 +18,8 @@ export async function SoftwareSchema({ locale }: { locale: Locale }) {
     image: new URL(`/${locale}/opengraph-image`, site.url).href,
     applicationCategory: 'MultimediaApplication',
     operatingSystem: 'Web',
+    downloadUrl: appUrl,
+    sameAs: [appUrl],
     inLanguage: locale,
   };
 

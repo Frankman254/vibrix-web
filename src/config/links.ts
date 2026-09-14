@@ -1,7 +1,11 @@
-function parseAppUrl(value: string | undefined): string | null {
-  if (!value?.trim()) return null;
+// Deploy público de Vibrix. NEXT_PUBLIC_APP_URL puede sobreescribirlo
+// (previews, staging); sin variable, la web siempre referencia la app real.
+const PUBLIC_APP_URL = 'https://vibrix-app.netlify.app/';
 
-  const url = new URL(value);
+function parseAppUrl(value: string | undefined): string {
+  const raw = value?.trim() || PUBLIC_APP_URL;
+
+  const url = new URL(raw);
   if (url.protocol !== 'https:' && url.protocol !== 'http:') {
     throw new Error('NEXT_PUBLIC_APP_URL must use HTTP or HTTPS.');
   }

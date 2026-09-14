@@ -34,7 +34,7 @@ export default async function HomePage({ params }: PageProps<'/[locale]'>) {
       <Comparison />
       <Waitlist locale={locale} />
       <Faq />
-      <FinalCta locale={locale} />
+      <FinalCta />
     </>
   );
 }

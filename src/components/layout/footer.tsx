@@ -1,6 +1,9 @@
 import type { Locale } from '@/i18n/routing';
+import { ArrowUpRight } from 'lucide-react';
 import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
+
+import { appUrl } from '@/config/links';
 
 export async function Footer({ locale }: { locale: Locale }) {
   const [common, footer, navigation] = await Promise.all([
@@ -38,6 +41,20 @@ export async function Footer({ locale }: { locale: Locale }) {
             <p className="mt-4 text-sm leading-6 text-fg-mute">
               {footer('description')}
             </p>
+            <a
+              href={appUrl}
+              target="_blank"
+              rel="noopener"
+              title={common('external')}
+              className="group mt-5 inline-flex min-h-11 items-center gap-1.5 rounded-sm text-sm font-medium text-fg transition-colors hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
+            >
+              {common('openApp')}
+              <ArrowUpRight
+                aria-hidden="true"
+                size={15}
+                className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+              />
+            </a>
           </div>
           <div className="flex flex-col gap-5 md:items-end">
             <nav aria-label={footer('navigation')}>

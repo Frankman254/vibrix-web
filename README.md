@@ -13,8 +13,9 @@ pnpm dev
 ```
 
 La raíz detecta `Accept-Language`; las páginas viven en `/es` y `/en`.
-`NEXT_PUBLIC_APP_URL` apunta a la app publicada. Sin esa variable, el CTA
-invita a explorar la suite y `/app` regresa a una sección existente.
+`NEXT_PUBLIC_APP_URL` apunta a la app publicada y por defecto ya es el deploy
+real (`https://vibrix-app.netlify.app`); todos los CTA abren la app en una
+pestaña nueva. La variable solo se usa para previews o staging.
 
 ## Lista de espera (Resend)
 

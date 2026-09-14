@@ -32,10 +32,11 @@ export async function Navbar({ locale }: { locale: Locale }) {
     };
   });
   const action = {
-    href: appUrl ? '/app' : `/${locale}#suite`,
-    label: common(appUrl ? 'openApp' : 'explore'),
+    href: appUrl,
+    label: common('openApp'),
+    external: true,
+    title: common('external'),
   };
-
   return (
     <header className="fixed inset-x-0 top-0 isolate z-40">
       <HeaderBackdrop />
@@ -89,6 +90,9 @@ export async function Navbar({ locale }: { locale: Locale }) {
           </nav>
           <a
             href={action.href}
+            target="_blank"
+            rel="noopener"
+            title={action.title}
             className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-accent/35 bg-accent px-5 text-sm font-semibold text-bg transition-colors hover:bg-accent/90 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
           >
             {action.label}
