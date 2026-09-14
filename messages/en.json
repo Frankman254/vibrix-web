@@ -61,7 +61,7 @@
   "Showcase": {
     "eyebrow": "A visual for every song",
     "title": "Six spectrum families.\nEndless combinations.",
-    "description": "Every image in this section is a Vibrix screenshot reacting to a track. Pick a shape and watch the scene change.",
+    "description": "Real Vibrix captures reacting to a track. Each one starts from a spectrum family and adds its own color, shape, and frame-memory settings: the starting point is one click away, and you tune the rest.",
     "listLabel": "Spectrum variants",
     "pause": "Pause autoplay",
     "play": "Resume autoplay",
@@ -69,13 +69,13 @@
     "items": {
       "radial": {
         "name": "Radial bars",
-        "family": "Classic",
+        "family": "Classic · Bars",
         "description": "A ring of bars around your logo that follows every hit."
       },
       "scope": {
         "name": "Oscilloscope",
         "family": "Oscilloscope",
-        "description": "The waveform drawn in real time, layer over layer."
+        "description": "The waveform in real time; with frame memory it leaves echoes layer over layer."
       },
       "tunnel": {
         "name": "Tunnel",
@@ -90,7 +90,7 @@
       "orbital": {
         "name": "Orbital",
         "family": "Orbital",
-        "description": "Orbiting dots that open up with the track’s energy."
+        "description": "Orbiting dots that open up with the track’s energy and leave a trail."
       },
       "spiral": {
         "name": "Spiral",
@@ -98,8 +98,8 @@
         "description": "A spiral of dots turning out from the logo."
       },
       "linear": {
-        "name": "Linear capsules",
-        "family": "Classic",
+        "name": "Linear blocks",
+        "family": "Classic · Blocks",
         "description": "A horizontal equalizer with an edge-to-edge gradient."
       },
       "pixel": {
@@ -142,7 +142,7 @@
       },
       "scenes": {
         "title": "Scenes and looks",
-        "description": "Group background, spectrum, and motion to switch the mood instantly."
+        "description": "Group spectrum, looks, and motion into a scene and assign it to each background to switch the mood instantly."
       },
       "obs": {
         "title": "Clean output for OBS",
@@ -224,7 +224,7 @@
     "items": {
       "spectrum": {
         "title": "Audio-reactive spectra",
-        "description": "Explore linear, radial, and pixel families that respond to your project’s audio."
+        "description": "Six spectrum families in linear or radial mode, with bars, blocks, waves, dots, or LED cells."
       },
       "lyrics": {
         "title": "Synchronized lyrics",

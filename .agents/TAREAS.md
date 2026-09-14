@@ -15,6 +15,16 @@
 
 ## Próximos pasos
 
+0. **Hecho (2026-09-13):** aplicados los
+   [AJUSTES_ALINEACION_VIBRIX.md](AJUSTES_ALINEACION_VIBRIX.md). Copy ES/EN
+   actualizado (description del showcase, scope, orbital, «Bloques lineales»,
+   features.spectrum, editor.scenes); los items `radial` y `linear` muestran
+   ahora «Classic · Barras/Bloques» en la etiqueta de familia; cero menciones
+   a «cápsulas» en el HTML servido. `content/legal/assets.md` registra las 10
+   capturas con su familia/estilo y «receta no registrada» donde no consta.
+   Pasos 5 (slots «Showcase · …» en Vibrix) y regeneración de capturas (W2)
+   siguen pendientes del repo del producto.
+
 1. Configurar `RESEND_API_KEY` y `RESEND_WAITLIST_SEGMENT_ID` en el servidor.
    Crear las propiedades de texto `song_language`, `signup_locale` y
    `waitlist_interest` en Resend. Reconstruir y probar con un correo propio.
@@ -42,3 +52,10 @@
   Usar `pnpm build --webpack` para contrastar la build sin cambiar el bundler
   predeterminado del proyecto. Registrar el resultado final en la entrega.
 - No se han creado commits ni desplegado estos cambios.
+
+## Verificación de los ajustes de alineación (2026-09-13)
+
+- `pnpm format`, `pnpm lint`, `pnpm test` (7/7), `pnpm build --webpack` y
+  `pnpm test:smoke` contra servidor de producción en el 3111: todos verdes.
+- «Bloques lineales» / «Linear blocks», «Classic · Barras/Bloques» y el copy
+  de memoria de fotogramas presentes en el HTML servido ES/EN; cero «cápsulas».

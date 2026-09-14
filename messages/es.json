@@ -61,7 +61,7 @@
   "Showcase": {
     "eyebrow": "Un visual para cada canción",
     "title": "Seis familias de espectro.\nInfinitas combinaciones.",
-    "description": "Todas las imágenes de esta sección son capturas de Vibrix reaccionando a una pista. Elige una forma y mira cómo cambia la escena.",
+    "description": "Capturas reales de Vibrix reaccionando a una pista. Cada una parte de una familia de espectro con sus ajustes de color, forma y memoria de fotogramas: el punto de partida está a un clic y el resto lo afinas tú.",
     "listLabel": "Variantes de espectro",
     "pause": "Pausar el pase automático",
     "play": "Reanudar el pase automático",
@@ -69,13 +69,13 @@
     "items": {
       "radial": {
         "name": "Barras radiales",
-        "family": "Classic",
+        "family": "Classic · Barras",
         "description": "Un anillo de barras alrededor de tu logo que sigue cada golpe."
       },
       "scope": {
         "name": "Osciloscopio",
         "family": "Oscilloscope",
-        "description": "La forma de onda dibujada en tiempo real, capa sobre capa."
+        "description": "La forma de onda en tiempo real; con memoria de fotogramas deja ecos capa sobre capa."
       },
       "tunnel": {
         "name": "Túnel",
@@ -90,7 +90,7 @@
       "orbital": {
         "name": "Orbital",
         "family": "Orbital",
-        "description": "Puntos en órbita que se abren con la energía de la pista."
+        "description": "Puntos en órbita que se abren con la energía de la pista y dejan estela."
       },
       "spiral": {
         "name": "Espiral",
@@ -98,8 +98,8 @@
         "description": "Una espiral de puntos que gira desde el logo."
       },
       "linear": {
-        "name": "Cápsulas lineales",
-        "family": "Classic",
+        "name": "Bloques lineales",
+        "family": "Classic · Bloques",
         "description": "Un ecualizador horizontal con degradado de lado a lado."
       },
       "pixel": {
@@ -142,7 +142,7 @@
       },
       "scenes": {
         "title": "Escenas y looks",
-        "description": "Agrupa fondo, espectro y movimiento para cambiar de ambiente al instante."
+        "description": "Agrupa espectro, looks y movimiento en una escena y asígnala a cada fondo para cambiar de ambiente al instante."
       },
       "obs": {
         "title": "Salida limpia para OBS",
@@ -224,7 +224,7 @@
     "items": {
       "spectrum": {
         "title": "Espectros reactivos",
-        "description": "Explora familias lineales, radiales y pixeladas que responden al audio de tu proyecto."
+        "description": "Seis familias de espectro en modo lineal o radial, con barras, bloques, ondas, puntos o celdas LED."
       },
       "lyrics": {
         "title": "Letras sincronizadas",
