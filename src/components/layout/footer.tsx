@@ -82,7 +82,17 @@ export async function Footer({ locale }: { locale: Locale }) {
         </div>
         <div className="flex flex-col justify-between gap-3 border-t border-line pt-6 text-xs text-fg-mute sm:flex-row sm:items-center">
           <p>{footer('copyright', { year: new Date().getFullYear() })}</p>
-          <p>{footer('madeBy')}</p>
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-1">
+            <nav aria-label={footer('legal')}>
+              <a
+                href={`/${locale}/legal/privacy`}
+                className="inline-flex min-h-11 items-center rounded-sm transition-colors hover:text-fg focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
+              >
+                {footer('privacy')}
+              </a>
+            </nav>
+            <p>{footer('madeBy')}</p>
+          </div>
         </div>
       </div>
     </footer>

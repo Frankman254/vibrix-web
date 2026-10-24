@@ -4,7 +4,7 @@ import { getTranslations } from 'next-intl/server';
 import { Reveal } from '@/components/motion/reveal';
 import { SectionHeading } from './section-heading';
 
-const ITEMS = ['install', 'privacy', 'export', 'rights'] as const;
+const ITEMS = ['install', 'privacy', 'export', 'browsers', 'rights'] as const;
 
 export async function Faq() {
   const t = await getTranslations('Faq');

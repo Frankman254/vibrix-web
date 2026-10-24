@@ -50,10 +50,36 @@ pruebas locales usan un proveedor simulado y no contactan a Resend.
 - `/favicon.ico`: tamaños 16/32/48 derivados del logo oficial; `/icon.svg`
   conserva la variante adaptable. Apple usa el PNG existente de 192 px.
 
-Configurar `NEXT_PUBLIC_SITE_URL` con el dominio público. Las previews de
-Vercel usan `VERCEL_URL` y permanecen `noindex`. Solo una build de producción
-con dominio configurado permite indexación. No usar localhost en un deploy
-ajeno a Vercel: establecer siempre `NEXT_PUBLIC_SITE_URL` en ese caso.
+## Deploy (Netlify) y URL pública
+
+El deploy es Netlify (`netlify.toml` + `@netlify/plugin-nextjs`). La URL base
+de canonical, `og:image`, JSON-LD, sitemap y robots se resuelve en
+`src/config/site.ts`, en este orden:
+
+1. `NEXT_PUBLIC_SITE_URL` (dominio público; configurarlo en Netlify).
+2. `URL` de Netlify, solo si `CONTEXT=production`.
+3. `DEPLOY_PRIME_URL` de Netlify (deploy previews y branch deploys).
+4. `https://${VERCEL_URL}` (respaldo por si se usa Vercel).
+5. `http://localhost:3000`.
+
+Solo se indexa con `NEXT_PUBLIC_SITE_URL` definido **y** una build de
+producción (`CONTEXT=production` en Netlify o `VERCEL_ENV=production`). Las
+previews y ramas siempre salen con `noindex` y `Disallow: /`. Netlify expone
+`URL`, `DEPLOY_PRIME_URL` y `CONTEXT` durante la build; como las páginas son
+estáticas, cuenta el valor de build. Para simularlo en local:
+
+```sh
+NEXT_PUBLIC_SITE_URL=https://example.com CONTEXT=production URL=https://example.com pnpm build
+```
+
+## Privacidad
+
+`/es/legal/privacy` y `/en/legal/privacy` explican qué guarda la lista de
+espera en Resend, cómo darse de baja, que no hay cookies propias ni analítica
+y que el audio no sale del equipo. El texto vive en `Privacy` de
+`messages/*.json`; el responsable y el correo de contacto siguen marcados como
+`[PENDIENTE]` y deben completarse antes de abrir la lista. Se enlaza desde el
+pie y desde el aviso del formulario.
 
 ## Comprobaciones
 
@@ -67,9 +93,13 @@ pnpm build
 `pnpm test` comprueba la validación y persistencia de la lista, altas repetidas,
 bajas, errores parciales y límites del proveedor, sin enviar información real.
 Con `pnpm start --port 3000`, ejecutar `pnpm test:smoke` para verificar el HTML
-visible del hero, sitemap, JSON-LD, tarjetas OG y favicon contra la build.
+visible del hero, sitemap, JSON-LD, tarjetas OG, favicon y la página de
+privacidad contra la build.
 `SMOKE_BASE_URL` permite apuntar a otra URL local.
 
-El export MP4/WebM figura en `Unreleased` del producto (alpha de desarrollo).
-Cambiar su disponibilidad pública solo cuando se publique la versión y se
-comprueben sus limitaciones. Estado de fases: `.agents/TAREAS.md`.
+El export offline MP4/WebM se publicó en Vibrix `0.5.0-alpha` y la web lo
+presenta como experimental: solo navegadores Chromium de escritorio
+(WebCodecs), sin QA de canciones largas; en Safari/Firefox la alternativa es
+el modo presentación + OBS. Revisar el copy si cambia su estado en
+`CHANGELOG.md` o `docs/status/CURRENT_SYSTEM_STATUS.md` de Vibrix. Estado de
+fases: `.agents/TAREAS.md`.

@@ -39,7 +39,7 @@
     "visualLabel": "Animación decorativa: un anillo de barras de luz que respira detrás de la captura",
     "pause": "Pausar animación",
     "play": "Reanudar animación",
-    "exportNote": "Exportación de vídeo en pruebas.",
+    "exportNote": "Exportación a MP4/WebM experimental, en navegadores Chromium.",
     "screenDimensions": "vibrix · 1920×1080"
   },
   "Marquee": {
@@ -192,7 +192,11 @@
       },
       "export": {
         "question": "¿Ya puedo exportar un vídeo?",
-        "answer": "La alpha de desarrollo ya incluye exportación experimental a MP4 o WebM, con limitaciones de capas y efectos. Sigue en pruebas y aún no forma parte de una versión publicada. Actualizaremos esta página cuando salga esa versión. La salida para capturar con OBS también está disponible."
+        "answer": "Sí, de forma experimental. Desde la versión 0.5.0-alpha, Vibrix exporta tu escena a un archivo MP4 (o WebM si el navegador no puede generar MP4), fotograma a fotograma a partir del audio del proyecto, así que el resultado no depende de la velocidad de tu equipo. Funciona en navegadores Chromium de escritorio. Sigue siendo una alpha: aún no se ha probado a fondo con canciones largas y algunas funciones recientes del editor todavía no aparecen en el vídeo. Para grabar o emitir en directo, el modo presentación con OBS sigue siendo la vía más probada."
+      },
+      "browsers": {
+        "question": "¿Qué navegador necesito? ¿Funciona en el móvil?",
+        "answer": "Para exportar vídeo necesitas un navegador basado en Chromium en ordenador, como Chrome o Edge, porque el export usa WebCodecs. En Safari y Firefox puedes abrir la escena en el modo presentación, que oculta la interfaz, y capturarla con OBS. Vibrix está pensado para ordenador: en móvil o tablet puede abrirse, pero el editor y el export todavía no están preparados para pantallas pequeñas."
       },
       "rights": {
         "question": "¿Qué música y arte puedo usar?",
@@ -210,7 +214,9 @@
     "navigation": "Enlaces del pie de página",
     "status": "La suite está tomando forma.",
     "copyright": "© {year} Vibrix",
-    "madeBy": "Creado por Frankman"
+    "madeBy": "Creado por Frankman",
+    "legal": "Enlaces legales",
+    "privacy": "Privacidad"
   },
   "NotFound": {
     "code": "404",
@@ -257,7 +263,7 @@
     "criterion": "El flujo",
     "local": "Vibrix · local",
     "cloud": "Render en servidor",
-    "note": "Comparación de formas de procesamiento, no de proveedores o planes concretos. La exportación offline de Vibrix continúa en pruebas; los precios de la suite aún no están definidos.",
+    "note": "Comparación de formas de procesamiento, no de proveedores o planes concretos. La exportación offline de Vibrix también se genera en tu equipo y sigue siendo experimental; los precios de la suite aún no están definidos.",
     "rows": {
       "processing": {
         "label": "Procesamiento",
@@ -299,7 +305,7 @@
       "other": "Otro"
     },
     "consent": "Quiero recibir por correo las novedades que he elegido. Podré darme de baja en cualquier momento.",
-    "privacy": "Guardaremos tu correo, idioma e interés en Resend para gestionar estos avisos. No se solicita ni se envía tu audio. Cada aviso incluirá un enlace para darte de baja.",
+    "privacy": "Guardaremos tu correo, idioma e interés en Resend para gestionar estos avisos. No se solicita ni se envía tu audio. Cada aviso incluirá un enlace para darte de baja. <link>Aviso de privacidad</link>.",
     "submit": "Apuntarme a la lista",
     "pending": "Guardando…",
     "success": "Ya estás en la lista. Te avisaremos cuando haya novedades.",
@@ -307,5 +313,40 @@
     "unavailable": "La lista de espera todavía no está abierta. Vuelve pronto.",
     "error": "No hemos podido completar el registro. Inténtalo de nuevo más tarde.",
     "website": "Deja este campo vacío"
+  },
+  "Privacy": {
+    "metaTitle": "Privacidad — Vibrix",
+    "metaDescription": "Qué datos trata la web de Vibrix, para qué y cómo darte de baja de la lista de espera.",
+    "eyebrow": "Legal",
+    "title": "Aviso de privacidad",
+    "updated": "Última actualización: 18 de octubre de 2026",
+    "intro": "Esta página explica, de forma sencilla, qué datos trata esta web y para qué. La actualizaremos antes de que cambie algo, por ejemplo si se abre la venta o se añade analítica.",
+    "back": "Volver al inicio",
+    "sections": {
+      "waitlist": {
+        "title": "Lista de espera",
+        "body": "Si te apuntas, guardamos tu correo, el idioma de tus canciones, el idioma de la web desde la que te apuntas y qué novedades te interesan (Vibrix, Transcriptor o ambos). Estos datos se almacenan en Resend, el servicio que usamos para gestionar los contactos de la lista. Solo los usamos para avisarte de las novedades que has elegido."
+      },
+      "unsubscribe": {
+        "title": "Darte de baja",
+        "body": "Cada aviso incluirá un enlace para darte de baja. Al usarlo, tu contacto queda marcado como dado de baja y no volverás a recibir avisos; apuntarte de nuevo desde el formulario no anula esa baja. Si quieres que borremos tus datos, escríbenos a la dirección de contacto de esta página."
+      },
+      "audio": {
+        "title": "Tu audio",
+        "body": "Esta web no pide ni recibe tu audio. En la app Vibrix, los archivos de audio que abres se analizan y se reproducen en tu navegador; la app no los sube a ningún servidor."
+      },
+      "cookies": {
+        "title": "Cookies y analítica",
+        "body": "Esta web no instala cookies propias ni usa herramientas de analítica o publicidad. El idioma se elige a partir de la configuración de tu navegador, sin guardar una cookie."
+      },
+      "hosting": {
+        "title": "Alojamiento",
+        "body": "La web está alojada en Netlify. Como cualquier servidor web, puede registrar datos técnicos de las peticiones, como la dirección IP o el navegador, para servir las páginas y protegerlas frente a abusos."
+      },
+      "contact": {
+        "title": "Responsable y contacto",
+        "body": "Responsable: [PENDIENTE: nombre del responsable]. Contacto para consultas sobre tus datos: [PENDIENTE: correo de contacto]."
+      }
+    }
   }
 }

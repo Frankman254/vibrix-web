@@ -25,6 +25,27 @@
    Pasos 5 (slots «Showcase · …» en Vibrix) y regeneración de capturas (W2)
    siguen pendientes del repo del producto.
 
+0b. **Hecho (2026-10-18):** rama `fix/landing-review-seo-waitlist`.
+   - Seguridad: `next` y `eslint-config-next` 16.3.5 → 16.4.2 (advisory de
+     Next.js del 2026-10-14; corregido desde 16.4.1), `react`/`react-dom`
+     19.2.8 → 19.2.9 y `source-map-js` transitivo a 1.2.2.
+     `pnpm audit --prod`: de 9 avisos (1 crítico) a 0.
+   - SEO en Netlify: `src/config/site.ts` resuelve `NEXT_PUBLIC_SITE_URL` →
+     `URL` (si `CONTEXT=production`) → `DEPLOY_PRIME_URL` → `VERCEL_URL` →
+     localhost. Indexable solo con `NEXT_PUBLIC_SITE_URL` y build de
+     producción; las previews siguen en `noindex`. La plataforma real es
+     Netlify, no Vercel (sustituye lo dicho en W0 y en el paso 3).
+   - Copy del export (Hero, FAQ, Comparativa) alineado con Vibrix
+     `0.5.0-alpha`: experimental, solo Chromium de escritorio. Nueva FAQ
+     `browsers` (navegadores, OBS + modo presentación, móvil). Sustituye el
+     paso 4.
+   - Página `/[locale]/legal/privacy` (ES/EN, metadata y hreflang) enlazada
+     desde el pie y el aviso de la waitlist, y añadida al sitemap y al smoke.
+     **Falta** rellenar responsable y correo de contacto (`[PENDIENTE]` en
+     `Privacy.sections.contact`) antes de abrir la lista (paso 2).
+   - Pendiente de producción: definir `NEXT_PUBLIC_SITE_URL` en Netlify
+     cuando haya dominio para permitir la indexación.
+
 1. Configurar `RESEND_API_KEY` y `RESEND_WAITLIST_SEGMENT_ID` en el servidor.
    Crear las propiedades de texto `song_language`, `signup_locale` y
    `waitlist_interest` en Resend. Reconstruir y probar con un correo propio.

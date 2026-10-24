@@ -39,7 +39,7 @@
     "visualLabel": "Decorative animation: a ring of light bars breathing behind the screenshot",
     "pause": "Pause animation",
     "play": "Resume animation",
-    "exportNote": "Video export is being tested.",
+    "exportNote": "Experimental MP4/WebM export in Chromium browsers.",
     "screenDimensions": "vibrix · 1920×1080"
   },
   "Marquee": {
@@ -192,7 +192,11 @@
       },
       "export": {
         "question": "Can I export a video yet?",
-        "answer": "The development alpha includes experimental MP4 or WebM export, with limitations on layers and effects. It is still being tested and is not part of a published release yet. We’ll update this page when that version ships. A clean output for OBS capture is also available."
+        "answer": "Yes, experimentally. Since version 0.5.0-alpha, Vibrix exports your scene to an MP4 file (or WebM when the browser cannot produce MP4), frame by frame from the project audio, so the result does not depend on your computer’s speed. It works in desktop Chromium browsers. It is still an alpha: it has not been tested thoroughly with long songs, and some recent editor features do not appear in the video yet. For live recording or streaming, presentation mode with OBS remains the most tested path."
+      },
+      "browsers": {
+        "question": "Which browser do I need? Does it work on mobile?",
+        "answer": "To export video you need a Chromium-based desktop browser, such as Chrome or Edge, because export relies on WebCodecs. In Safari and Firefox you can open the scene in presentation mode, which hides the interface, and capture it with OBS. Vibrix is designed for desktop: it may open on a phone or tablet, but the editor and export are not ready for small screens yet."
       },
       "rights": {
         "question": "What music and artwork can I use?",
@@ -210,7 +214,9 @@
     "navigation": "Footer navigation",
     "status": "The suite is taking shape.",
     "copyright": "© {year} Vibrix",
-    "madeBy": "Created by Frankman"
+    "madeBy": "Created by Frankman",
+    "legal": "Legal links",
+    "privacy": "Privacy"
   },
   "NotFound": {
     "code": "404",
@@ -257,7 +263,7 @@
     "criterion": "The workflow",
     "local": "Vibrix · local",
     "cloud": "Server rendering",
-    "note": "A comparison of processing approaches, not specific providers or plans. Vibrix’s offline video export is still being tested; suite pricing is not yet defined.",
+    "note": "A comparison of processing approaches, not specific providers or plans. Vibrix’s offline video export also runs on your device and is still experimental; suite pricing is not yet defined.",
     "rows": {
       "processing": {
         "label": "Processing",
@@ -299,7 +305,7 @@
       "other": "Other"
     },
     "consent": "I want to receive my selected updates by email. I can unsubscribe at any time.",
-    "privacy": "We’ll store your email, language, and interest in Resend to manage these updates. We do not request or send your audio. Every update will include an unsubscribe link.",
+    "privacy": "We’ll store your email, language, and interest in Resend to manage these updates. We do not request or send your audio. Every update will include an unsubscribe link. <link>Privacy notice</link>.",
     "submit": "Join the waitlist",
     "pending": "Saving…",
     "success": "You’re on the list. We’ll let you know when there’s news.",
@@ -307,5 +313,40 @@
     "unavailable": "The waitlist is not open yet. Check back soon.",
     "error": "We couldn’t complete your signup. Please try again later.",
     "website": "Leave this field empty"
+  },
+  "Privacy": {
+    "metaTitle": "Privacy — Vibrix",
+    "metaDescription": "What data the Vibrix website processes, why, and how to leave the waitlist.",
+    "eyebrow": "Legal",
+    "title": "Privacy notice",
+    "updated": "Last updated: October 18, 2026",
+    "intro": "This page explains, in plain words, what data this website processes and why. We will update it before anything changes, for example if sales open or analytics are added.",
+    "back": "Back to home",
+    "sections": {
+      "waitlist": {
+        "title": "Waitlist",
+        "body": "If you sign up, we store your email, the language of your songs, the language of the site you signed up from, and which updates interest you (Vibrix, Transcriptor, or both). This data is stored in Resend, the service we use to manage the waitlist contacts. We only use it to send you the updates you chose."
+      },
+      "unsubscribe": {
+        "title": "Unsubscribing",
+        "body": "Every update will include an unsubscribe link. Once you use it, your contact is marked as unsubscribed and you will not receive further updates; signing up again through the form does not undo that. If you want us to delete your data, write to the contact address on this page."
+      },
+      "audio": {
+        "title": "Your audio",
+        "body": "This website does not request or receive your audio. In the Vibrix app, the audio files you open are analyzed and played in your browser; the app does not upload them to any server."
+      },
+      "cookies": {
+        "title": "Cookies and analytics",
+        "body": "This website sets no cookies of its own and uses no analytics or advertising tools. The language is chosen from your browser settings, without storing a cookie."
+      },
+      "hosting": {
+        "title": "Hosting",
+        "body": "The website is hosted on Netlify. Like any web server, it may log technical request data, such as your IP address or browser, to serve the pages and protect them from abuse."
+      },
+      "contact": {
+        "title": "Controller and contact",
+        "body": "Controller: [PENDING: controller name]. Contact for questions about your data: [PENDING: contact email]."
+      }
+    }
   }
 }

@@ -126,7 +126,16 @@ export function WaitlistForm({
         </button>
       </fieldset>
       <p id="waitlist-notice" className="mt-5 text-xs leading-6 text-fg-mute">
-        {t('privacy')}
+        {t.rich('privacy', {
+          link: (chunks) => (
+            <a
+              href={`/${locale}/legal/privacy`}
+              className="rounded-sm text-fg underline underline-offset-4 transition-colors hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+            >
+              {chunks}
+            </a>
+          ),
+        })}
       </p>
       <p
         id="waitlist-status"

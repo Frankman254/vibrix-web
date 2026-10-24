@@ -36,16 +36,28 @@ for (const locale of ['es', 'en']) {
   const png = Buffer.from(await og.arrayBuffer());
   assert.equal(png.readUInt32BE(16), 1200);
   assert.equal(png.readUInt32BE(20), 630);
+  assert.match(html, new RegExp(`href="/${locale}/legal/privacy"`));
+  const privacy = await fetch(`${base}/${locale}/legal/privacy`);
+  assert.equal(privacy.status, 200);
+  const privacyHtml = await privacy.text();
+  assert.match(privacyHtml, /<h1\b[^>]*id="privacy-title"/);
+  assert.match(
+    privacyHtml,
+    new RegExp(`rel="canonical" href="[^"]*/${locale}/legal/privacy"`),
+  );
+  assert.match(privacyHtml, /hrefLang="es" href="[^"]*\/es\/legal\/privacy"/);
   console.log(
-    `${locale}: HTML visible, features, comparison, waitlist, schema, favicon and OG pass`,
+    `${locale}: HTML visible, features, comparison, waitlist, schema, favicon, OG and privacy pass`,
   );
 }
 const sitemapResponse = await fetch(`${base}/sitemap.xml`);
 assert.equal(sitemapResponse.status, 200);
 const sitemap = await sitemapResponse.text();
-assert.equal((sitemap.match(/<url>/g) || []).length, 2);
+assert.equal((sitemap.match(/<url>/g) || []).length, 4);
 assert.match(sitemap, /\/es<\/loc>/);
 assert.match(sitemap, /\/en<\/loc>/);
+assert.match(sitemap, /\/es\/legal\/privacy<\/loc>/);
+assert.match(sitemap, /\/en\/legal\/privacy<\/loc>/);
 assert.match(sitemap, /hreflang="es"/);
 const favicon = Buffer.from(
   await (await fetch(`${base}/favicon.ico`)).arrayBuffer(),
